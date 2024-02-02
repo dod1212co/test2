@@ -109,12 +109,7 @@ class CustomTextFormField extends StatelessWidget {
         suffixIcon: suffix,
         suffixIconConstraints: suffixConstraints,
         isDense: true,
-        contentPadding: contentPadding ??
-            EdgeInsets.only(
-              top: 15.v,
-              right: 15.h,
-              bottom: 15.v,
-            ),
+        contentPadding: contentPadding ?? EdgeInsets.all(15.h),
         fillColor: fillColor,
         filled: filled,
         border: borderDecoration ??
