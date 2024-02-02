@@ -39,31 +39,13 @@ class LoginScreen extends StatelessWidget {
                               SizedBox(height: 88.v),
                               CustomTextFormField(
                                   controller: priceController,
-                                  hintText: "USERNAME".toUpperCase(),
-                                  prefix: Container(
-                                      margin: EdgeInsets.symmetric(
-                                          horizontal: 30.h, vertical: 10.v),
-                                      child: CustomImageView(
-                                          imagePath: ImageConstant.imgPassim,
-                                          height: 28.v,
-                                          width: 25.h)),
-                                  prefixConstraints:
-                                      BoxConstraints(maxHeight: 48.v)),
+                                  hintText: "USERNAME".toUpperCase()),
                               SizedBox(height: 32.v),
                               CustomTextFormField(
                                   controller: passwordController,
                                   hintText: "PASSWORD".toUpperCase(),
                                   textInputAction: TextInputAction.done,
                                   textInputType: TextInputType.visiblePassword,
-                                  prefix: Container(
-                                      margin: EdgeInsets.symmetric(
-                                          horizontal: 30.h, vertical: 8.v),
-                                      child: CustomImageView(
-                                          imagePath: ImageConstant.imgUserim,
-                                          height: 32.v,
-                                          width: 28.h)),
-                                  prefixConstraints:
-                                      BoxConstraints(maxHeight: 48.v),
                                   obscureText: true),
                               SizedBox(height: 88.v),
                               CustomElevatedButton(

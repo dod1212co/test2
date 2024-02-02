@@ -6,10 +6,6 @@ class ImageConstant {
   static String imgOriginal1642142171857 =
       '$imagePath/img_original_1642142171857.png';
 
-  static String imgPassim = '$imagePath/img_passim.png';
-
-  static String imgUserim = '$imagePath/img_userim.png';
-
   // add queue images
   static String imgArrowLeft = '$imagePath/img_arrow_left.svg';
 
