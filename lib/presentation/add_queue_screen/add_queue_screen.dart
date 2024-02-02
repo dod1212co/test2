@@ -97,7 +97,7 @@ class AddQueueScreen extends StatelessWidget {
                                 ]))
                       ])),
                   SizedBox(height: 67.v),
-                  _buildNine(context),
+                  _buildSixtyNine(context),
                   SizedBox(height: 5.v)
                 ]))));
   }
@@ -133,7 +133,7 @@ class AddQueueScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildNine(BuildContext context) {
+  Widget _buildSixtyNine(BuildContext context) {
     return Padding(
         padding: EdgeInsets.only(right: 1.h),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
