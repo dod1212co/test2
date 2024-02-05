@@ -6,10 +6,6 @@ class ImageConstant {
   static String imgOriginal1642142171857 =
       '$imagePath/img_original_1642142171857.png';
 
-  static String imgLock = '$imagePath/img_lock.svg';
-
-  static String imgBag = '$imagePath/img_bag.svg';
-
   // add queue images
   static String imgArrowLeft = '$imagePath/img_arrow_left.svg';
 

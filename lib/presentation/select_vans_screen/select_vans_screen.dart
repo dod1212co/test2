@@ -11,14 +11,12 @@ class SelectVansScreen extends StatelessWidget {
         child: Scaffold(
             body: SizedBox(
                 width: double.maxFinite,
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _buildHeadSection(context),
-                      Spacer(flex: 26),
-                      _buildVansButtonNo1Section(context),
-                      Spacer(flex: 73)
-                    ]))));
+                child: Column(children: [
+                  _buildHeadSection(context),
+                  Spacer(flex: 25),
+                  _buildVansButtonNo1Section(context),
+                  Spacer(flex: 74)
+                ]))));
   }
 
   /// Section Widget
@@ -44,7 +42,7 @@ class SelectVansScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildVansButtonNo1Section(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(right: 16.h),
+        padding: EdgeInsets.symmetric(horizontal: 15.h),
         child: ListView.separated(
             physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
