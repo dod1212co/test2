@@ -2,8 +2,8 @@ import 'package:dod1212com_s_application2/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class Vansbuttonno1section1ItemWidget extends StatelessWidget {
-  Vansbuttonno1section1ItemWidget({
+class Vansbuttonno1sectionItemWidget extends StatelessWidget {
+  Vansbuttonno1sectionItemWidget({
     Key? key,
     this.onTapVansButtonNo1,
   }) : super(

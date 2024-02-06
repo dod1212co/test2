@@ -13,10 +13,10 @@ class CustomButtonStyles {
       );
 
   // Outline button style
-  static ButtonStyle get outlineBlueA => OutlinedButton.styleFrom(
-        backgroundColor: appTheme.blueA100,
+  static ButtonStyle get outlineSecondaryContainer => OutlinedButton.styleFrom(
+        backgroundColor: theme.colorScheme.secondaryContainer,
         side: BorderSide(
-          color: appTheme.blueA100,
+          color: theme.colorScheme.secondaryContainer,
           width: 3,
         ),
         shape: RoundedRectangleBorder(
