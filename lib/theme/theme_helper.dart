@@ -49,11 +49,15 @@ class ThemeHelper {
       colorScheme: colorScheme,
       textTheme: TextThemes.textTheme(colorScheme),
       scaffoldBackgroundColor: colorScheme.primary,
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: colorScheme.primary,
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          backgroundColor: Colors.transparent,
+          side: BorderSide(
+            color: appTheme.blueA100,
+            width: 3.h,
+          ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(24.h),
+            borderRadius: BorderRadius.circular(22.h),
           ),
           visualDensity: const VisualDensity(
             vertical: -4,
@@ -62,15 +66,11 @@ class ThemeHelper {
           padding: EdgeInsets.zero,
         ),
       ),
-      outlinedButtonTheme: OutlinedButtonThemeData(
-        style: OutlinedButton.styleFrom(
-          backgroundColor: Colors.transparent,
-          side: BorderSide(
-            color: colorScheme.secondaryContainer,
-            width: 3.h,
-          ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: colorScheme.primary,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(22.h),
+            borderRadius: BorderRadius.circular(24.h),
           ),
           visualDensity: const VisualDensity(
             vertical: -4,

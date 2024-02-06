@@ -1,5 +1,6 @@
-import '../select_vans_screen/widgets/vansbuttonno1section1_item_widget.dart';
+import '../select_vans_screen/widgets/vansbuttonno1section_item_widget.dart';
 import 'package:dod1212com_s_application2/core/app_export.dart';
+import 'package:dod1212com_s_application2/widgets/custom_outlined_button.dart';
 import 'package:flutter/material.dart';
 
 class SelectVansScreen extends StatelessWidget {
@@ -13,9 +14,18 @@ class SelectVansScreen extends StatelessWidget {
                 width: double.maxFinite,
                 child: Column(children: [
                   _buildHeadSection(context),
-                  Spacer(flex: 25),
+                  Spacer(flex: 29),
                   _buildVansButtonNo1Section(context),
-                  Spacer(flex: 74)
+                  Spacer(flex: 29),
+                  CustomOutlinedButton(
+                      width: 190.h,
+                      text: "CANCEL".toUpperCase(),
+                      margin: EdgeInsets.only(left: 107.h),
+                      onPressed: () {
+                        onTapCANCEL(context);
+                      },
+                      alignment: Alignment.centerLeft),
+                  Spacer(flex: 40)
                 ]))));
   }
 
@@ -23,20 +33,24 @@ class SelectVansScreen extends StatelessWidget {
   Widget _buildHeadSection(BuildContext context) {
     return Container(
         width: double.maxFinite,
-        padding: EdgeInsets.symmetric(horizontal: 28.h, vertical: 10.v),
+        padding: EdgeInsets.symmetric(horizontal: 23.h, vertical: 16.v),
         decoration: AppDecoration.fillBlueGray
             .copyWith(borderRadius: BorderRadiusStyle.circleBorder46),
-        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          CustomImageView(
-              imagePath: ImageConstant.imgImage,
-              height: 55.adaptSize,
-              width: 55.adaptSize,
-              margin: EdgeInsets.only(bottom: 13.v)),
-          Padding(
-              padding: EdgeInsets.only(left: 134.h, top: 18.v, bottom: 31.v),
-              child:
-                  Text("nAME".toUpperCase(), style: theme.textTheme.bodyMedium))
-        ]));
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomImageView(
+                  imagePath: ImageConstant.imgImage,
+                  height: 55.v,
+                  width: 58.h,
+                  margin: EdgeInsets.only(bottom: 7.v)),
+              Padding(
+                  padding:
+                      EdgeInsets.only(top: 18.v, right: 136.h, bottom: 25.v),
+                  child: Text("nAME".toUpperCase(),
+                      style: theme.textTheme.bodyMedium))
+            ]));
   }
 
   /// Section Widget
@@ -51,7 +65,7 @@ class SelectVansScreen extends StatelessWidget {
             },
             itemCount: 3,
             itemBuilder: (context, index) {
-              return Vansbuttonno1section1ItemWidget(onTapVansButtonNo1: () {
+              return Vansbuttonno1sectionItemWidget(onTapVansButtonNo1: () {
                 onTapVansButtonNo1(context);
               });
             }));
@@ -60,5 +74,10 @@ class SelectVansScreen extends StatelessWidget {
   /// Navigates to the mainScreen when the action is triggered.
   onTapVansButtonNo1(BuildContext context) {
     Navigator.pushNamed(context, AppRoutes.mainScreen);
+  }
+
+  /// Navigates to the addQueueScreen when the action is triggered.
+  onTapCANCEL(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.addQueueScreen);
   }
 }

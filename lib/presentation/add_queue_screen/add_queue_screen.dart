@@ -207,13 +207,13 @@ class AddQueueScreen extends StatelessWidget {
             child: CustomOutlinedButton(
               text: "OK".toUpperCase(),
               margin: EdgeInsets.only(right: 23.h),
+              buttonStyle: CustomButtonStyles.outlineSecondaryContainer,
             ),
           ),
           Expanded(
             child: CustomOutlinedButton(
               text: "CANCEL".toUpperCase(),
               margin: EdgeInsets.only(left: 23.h),
-              buttonStyle: CustomButtonStyles.outlineBlueA,
             ),
           ),
         ],
